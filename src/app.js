@@ -1,36 +1,25 @@
-const Contact = require('./models/contact.js');
-
-const contacts = []
+const Contact = require("./models/contact.js");
+const { addContact } = require("./helpers/helperFunctions.js");
 
 document.addEventListener("DOMContentLoaded", () => {
-
   // Form
   const form = document.querySelector("#form");
-  // contacts
-  const ul = document.querySelector("#contacts");
+  // Contacts
+  const contactsElement = document.querySelector("#contacts");
 
-  //   submit new contact
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    contactInfo = [
+    const contact = new Contact(
       this.name.value,
       this.relationship.value,
       this.phoneNumber.value,
-      this.email.value,
-    ];
-    contactInfo.forEach((item) => {
-      ul.appendChild(addDivItem(item));
-    });
+      this.email.value
+    );
+    addContact(contact, contactsElement);
     this.reset();
   });
 
   form.deleteButton.addEventListener("click", function () {
-    ul.innerHTML = "";
+    contactsElement.innerHTML = "";
   });
 });
-
-function addDivItem(text) {
-  const newElement = document.createElement("div");
-  newElement.textContent = text;
-  return newElement;
-}

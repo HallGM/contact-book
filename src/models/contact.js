@@ -1,8 +1,8 @@
-const Contact = function(name, relationship, phoneNumber, email) {
+const Contact = function (name, relationship, phoneNumber, email) {
     this.name = name;
     this.relationship = relationship;
     this.phoneNumber = phoneNumber;
-    this.email = emai
+    this.email = email;
 }
 
 module.exports = Contact;

@@ -1,0 +1,53 @@
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    margin: 10px;
+    padding: 10px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    max-width: fit-content;
+}
+
+#form {
+    width: fit-content;
+    background-color: lightcoral;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#form h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#form div{
+    margin: 5px;
+}
+
+#form .btn-div {
+    width: fit-content;
+    margin: auto;
+    /* background-color: red; */
+}
+
+#form div label {
+    /* background-color: blue; */
+    display: block;
+}
+
+input[type="button"], input[type="submit"] {
+    /* background-color: orange; */
+    margin: 5px;
+ }
+
+ .btn-save input{
+     background-color: green;
+ }
+
+ .btn-delete input {
+     background-color: red;
+ }
